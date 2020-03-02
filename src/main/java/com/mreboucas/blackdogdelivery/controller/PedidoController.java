@@ -17,7 +17,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.mreboucas.blackdogdelivery.entity.Cliente;
 import com.mreboucas.blackdogdelivery.entity.Item;
 import com.mreboucas.blackdogdelivery.entity.Pedido;
-import com.mreboucas.blackdogdelivery.repository.ClienteRepository;
+import com.mreboucas.blackdogdelivery.repository.ClienteRepositoryTest;
 import com.mreboucas.blackdogdelivery.repository.ItemRepository;
 import com.mreboucas.blackdogdelivery.repository.PedidoRepository;
 
@@ -27,10 +27,10 @@ public class PedidoController {
 
 	private final PedidoRepository pedidoRepository;
 	private final ItemRepository itemRepository;
-	private final ClienteRepository clienteRepository;
+	private final ClienteRepositoryTest clienteRepository;
 	private final String ITEM_URI = "pedidos/";
 
-	public PedidoController(PedidoRepository pedidoRepository,ItemRepository itemRepository,ClienteRepository clienteRepository) {
+	public PedidoController(PedidoRepository pedidoRepository,ItemRepository itemRepository,ClienteRepositoryTest clienteRepository) {
 		this.pedidoRepository = pedidoRepository;
 		this.itemRepository = itemRepository;
 		this.clienteRepository = clienteRepository;

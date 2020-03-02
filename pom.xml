@@ -33,8 +33,23 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-tomcat</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-undertow</artifactId>
+		</dependency>
+		<!-- excluir o tomcat e adicionar outros servidores. Para isso é preciso 
+			excluir a lib nativa do tomcat <dependency> <groupId>org.springframework.boot</groupId> 
+			<artifactId>spring-boot-starter-web</artifactId> <exclusions> <exclusion> 
+			<groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-tomcat</artifactId> 
+			</exclusion> </exclusions> </dependency> <dependency> <groupId>org.springframework.boot</groupId> 
+			<artifactId>spring-boot-starter-jetty</artifactId> </dependency> -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -73,6 +88,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -80,6 +100,8 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<!-- Tornar o jar executável <configuration> <executable>true</executable> 
+					</configuration> -->
 			</plugin>
 			<plugin>
 				<groupId>com.spotify</groupId>

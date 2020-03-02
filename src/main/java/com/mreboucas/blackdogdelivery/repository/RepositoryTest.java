@@ -30,7 +30,7 @@ public class RepositoryTest implements ApplicationRunner {
 	private static final long ID_PEDIDO3 = 1002l;
 
 	@Autowired
-	private ClienteRepository clienteRepository;
+	private ClienteRepositoryTest clienteRepository;
 
 	@Override
 	public void run(ApplicationArguments applicationArguments) throws Exception {

@@ -12,16 +12,16 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.mreboucas.blackdogdelivery.entity.Cliente;
-import com.mreboucas.blackdogdelivery.repository.ClienteRepository;
+import com.mreboucas.blackdogdelivery.repository.ClienteRepositoryTest;
 
 @Controller
 @RequestMapping("/clientes")
 public class ClienteController {
 
-	private final ClienteRepository clienteRepository;
+	private final ClienteRepositoryTest clienteRepository;
 	private final String CLIENTE_URI = "clientes/";
 
-	public ClienteController(ClienteRepository clienteRepository) {
+	public ClienteController(ClienteRepositoryTest clienteRepository) {
 		this.clienteRepository = clienteRepository;
 	}
 
